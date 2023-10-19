@@ -1,0 +1,25 @@
+composer create-project --prefer-dist laravel/laravel trabajofinal
+
+DB_CONNECTION=sqlsrv
+DB_HOST=localhost
+DB_PORT=1433
+DB_DATABASE=login
+DB_USERNAME=user
+DB_PASSWORD="123"
+
+
+
+composer require laravel/ui  
+php artisan ui bootstrap --auth
+
+
+
+USE registro;
+SELECT * FROM users;
+
+
+carbon 
+    public function fromDateTime($value)
+    {
+        return Carbon::parse(parent::fromDateTime($value))->format('Y-d-m H:i:s');
+    }
