@@ -47,8 +47,7 @@ class VentumController extends Controller
 
         $ventum = Ventum::create($request->all());
 
-        return redirect()->route('venta.index')
-            ->with('success', 'Ventum created successfully.');
+        return back()->with('success', 'Ventum created successfully.');
     }
 
     /**
@@ -60,7 +59,6 @@ class VentumController extends Controller
     public function show($id)
     {
         $ventum = Ventum::find($id);
-
         return view('ventum.show', compact('ventum'));
     }
 
@@ -73,7 +71,6 @@ class VentumController extends Controller
     public function edit($id)
     {
         $ventum = Ventum::find($id);
-
         return view('ventum.edit', compact('ventum'));
     }
 

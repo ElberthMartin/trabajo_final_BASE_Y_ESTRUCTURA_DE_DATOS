@@ -87,7 +87,6 @@
                                     
 										<th>Product Id</th>
 										<th>Cantidda</th>
-										<th>Fecha Venta</th>
 										<th>Precio Unitario</th>
 
                                     <th class="w-1"></th>
@@ -103,7 +102,6 @@
                                         
 											<td>{{ $ventum->product_id }}</td>
 											<td>{{ $ventum->cantidda }}</td>
-											<td>{{ $ventum->fecha_venta }}</td>
 											<td>{{ $ventum->precio_unitario }}</td>
 
                                         <td>
@@ -115,15 +113,15 @@
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-end">
                                                         <a class="dropdown-item"
-                                                           href="{{ route('venta.show',$ventum->id) }}">
+                                                           href="{{ route('show',$ventum->id) }}">
                                                             View
                                                         </a>
                                                         <a class="dropdown-item"
-                                                           href="{{ route('venta.edit',$ventum->id) }}">
+                                                           href="">
                                                             Edit
                                                         </a>
                                                         <form
-                                                            action="{{ route('venta.destroy',$ventum->id) }}"
+                                                            action=""
                                                             method="POST">
                                                             @csrf
                                                             @method('DELETE')

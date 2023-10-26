@@ -22,10 +22,9 @@ class Ventum extends Model
 {
     
     static $rules = [
-		'product_id' => 'required',
-		'cantidda' => 'required',
-		'fecha_venta' => 'required',
-		'precio_unitario' => 'required',
+      'product_id' => 'required',
+      'cantidad' => 'required',
+      'precio_unitario' => 'required'
     ];
 
     protected $perPage = 20;
@@ -35,7 +34,7 @@ class Ventum extends Model
      *
      * @var array
      */
-    protected $fillable = ['product_id','cantidda','fecha_venta','precio_unitario'];
+    protected $fillable = ['product_id','cantidad','precio_unitario'];
 
 
     /**

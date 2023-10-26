@@ -9,23 +9,15 @@
     </div>
 </div>
 <div class="form-group mb-3">
-    <label class="form-label">   {{ Form::label('cantidda') }}</label>
+    <label class="form-label">   {{ Form::label('cantidad') }}</label>
     <div>
-        {{ Form::text('cantidda', $ventum->cantidda, ['class' => 'form-control' .
-        ($errors->has('cantidda') ? ' is-invalid' : ''), 'placeholder' => 'Cantidda']) }}
-        {!! $errors->first('cantidda', '<div class="invalid-feedback">:message</div>') !!}
-        <small class="form-hint">ventum <b>cantidda</b> instruction.</small>
+        {{ Form::text('cantidad', $ventum->cantidad, ['class' => 'form-control' .
+        ($errors->has('cantidad') ? ' is-invalid' : ''), 'placeholder' => 'cantidad']) }}
+        {!! $errors->first('cantidad', '<div class="invalid-feedback">:message</div>') !!}
+        <small class="form-hint">ventum <b>cantidad</b> instruction.</small>
     </div>
 </div>
-<div class="form-group mb-3">
-    <label class="form-label">   {{ Form::label('fecha_venta') }}</label>
-    <div>
-        {{ Form::text('fecha_venta', $ventum->fecha_venta, ['class' => 'form-control' .
-        ($errors->has('fecha_venta') ? ' is-invalid' : ''), 'placeholder' => 'Fecha Venta']) }}
-        {!! $errors->first('fecha_venta', '<div class="invalid-feedback">:message</div>') !!}
-        <small class="form-hint">ventum <b>fecha_venta</b> instruction.</small>
-    </div>
-</div>
+
 <div class="form-group mb-3">
     <label class="form-label">   {{ Form::label('precio_unitario') }}</label>
     <div>
