@@ -13,7 +13,7 @@
                         Update
                     </div>
                     <h2 class="page-title">
-                        {{ __('Ventum ') }}
+                        {{ __('Ventum') }}
                     </h2>
                 </div>
                 <!-- Page title actions -->
