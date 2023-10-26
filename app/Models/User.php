@@ -44,8 +44,5 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function fromDateTime($value)
-    {
-        return Carbon::parse(parent::fromDateTime($value))->format('Y-d-m H:i:s');
-    }
+    
 }

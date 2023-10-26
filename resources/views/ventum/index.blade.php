@@ -1,7 +1,7 @@
 @extends('tablar::page')
 
 @section('title')
-    Product
+    Ventum
 @endsection
 
 @section('content')
@@ -12,16 +12,16 @@
                 <div class="col">
                     <!-- Page pre-title -->
                     <div class="page-pretitle">
-                        
+                        List
                     </div>
                     <h2 class="page-title">
-                        {{ __('Producto ') }}
+                        {{ __('Ventum ') }}
                     </h2>
                 </div>
                 <!-- Page title actions -->
                 <div class="col-12 col-md-auto ms-auto d-print-none">
                     <div class="btn-list">
-                        <a href="{{ route('products.create') }}" class="btn btn-primary d-none d-sm-inline-block">
+                        <a href="{{ route('ventum.create') }}" class="btn btn-primary d-none d-sm-inline-block">
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
                                  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -30,7 +30,7 @@
                                 <line x1="12" y1="5" x2="12" y2="19"/>
                                 <line x1="5" y1="12" x2="19" y2="12"/>
                             </svg>
-                          Agregar producto
+                            Create Ventum
                         </a>
                     </div>
                 </div>
@@ -47,20 +47,20 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">PRODUCTOS</h3>
+                            <h3 class="card-title">Ventum</h3>
                         </div>
                         <div class="card-body border-bottom py-3">
                             <div class="d-flex">
                                 <div class="text-muted">
-                                    Mostrar
+                                    Show
                                     <div class="mx-2 d-inline-block">
                                         <input type="text" class="form-control form-control-sm" value="10" size="3"
                                                aria-label="Invoices count">
                                     </div>
-                                   
+                                    entries
                                 </div>
                                 <div class="ms-auto text-muted">
-                                    Buscar:
+                                    Search:
                                     <div class="ms-2 d-inline-block">
                                         <input type="text" class="form-control form-control-sm"
                                                aria-label="Search invoice">
@@ -85,24 +85,26 @@
                                         </svg>
                                     </th>
                                     
-										<th>Description</th>
-										<th>Stock</th>
-										<th>Price</th>
+										<th>Product Id</th>
+										<th>Cantidda</th>
+										<th>Fecha Venta</th>
+										<th>Precio Unitario</th>
 
                                     <th class="w-1"></th>
                                 </tr>
                                 </thead>
 
                                 <tbody>
-                                @forelse ($products as $product)
+                                @forelse ($venta as $ventum)
                                     <tr>
                                         <td><input class="form-check-input m-0 align-middle" type="checkbox"
-                                                   aria-label="Select product"></td>
+                                                   aria-label="Select ventum"></td>
                                         <td>{{ ++$i }}</td>
                                         
-											<td>{{ $product->description }}</td>
-											<td>{{ $product->stock }}</td>
-											<td>{{ $product->price }}</td>
+											<td>{{ $ventum->product_id }}</td>
+											<td>{{ $ventum->cantidda }}</td>
+											<td>{{ $ventum->fecha_venta }}</td>
+											<td>{{ $ventum->precio_unitario }}</td>
 
                                         <td>
                                             <div class="btn-list flex-nowrap">
@@ -113,15 +115,15 @@
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-end">
                                                         <a class="dropdown-item"
-                                                           href="{{ route('products.show',$product->id) }}">
+                                                           href="{{ route('venta.show',$ventum->id) }}">
                                                             View
                                                         </a>
                                                         <a class="dropdown-item"
-                                                           href="{{ route('products.edit',$product->id) }}">
+                                                           href="{{ route('venta.edit',$ventum->id) }}">
                                                             Edit
                                                         </a>
                                                         <form
-                                                            action="{{ route('products.destroy',$product->id) }}"
+                                                            action="{{ route('venta.destroy',$ventum->id) }}"
                                                             method="POST">
                                                             @csrf
                                                             @method('DELETE')
@@ -145,7 +147,7 @@
                             </table>
                         </div>
                        <div class="card-footer d-flex align-items-center">
-                            {!! $products->links('tablar::pagination') !!}
+                            {!! $venta->links('tablar::pagination') !!}
                         </div>
                     </div>
                 </div>

@@ -150,21 +150,14 @@ return [
             'url' => '/home'
         ],
         [
-            'text' => 'Products',
+            'text' => 'Productos',
             'icon' => 'ti ti-home',
             'url' => '/products'
         ],
         [
-            'text' => 'Support',
-            'url' => '/support',
-            'icon' => 'ti ti-shpping-card',
-            'submenu' => [
-                [
-                    'text' => 'Ticket',
-                    'url' => '#',
-                    'icon' => 'ti ti-article'
-                ]
-            ],
+            'text' => 'Ventas',
+            'icon' => 'ti ti-home',
+            'url' => '/ventum'
         ],
 
     ],
