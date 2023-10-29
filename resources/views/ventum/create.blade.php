@@ -45,7 +45,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Ventum Details</h3>
+                            <h3 class="card-title">Detalles de venta</h3>
                         </div>
                         <div class="card-body">
                             <form method="POST" action="{{ route('ventum.store') }}" id="ajaxForm" role="form"

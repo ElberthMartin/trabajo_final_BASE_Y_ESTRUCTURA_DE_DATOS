@@ -7,6 +7,26 @@
                 <img src="{{asset(config('tablar.auth_logo.img.path','assets/logo.svg'))}}" height="36"
                      alt=""></a>
         </div>
+
+        <style>
+        .card-md {
+            background: linear-gradient(45deg, #007bff, #00c49d);
+            background-size: 200% 200%;
+            animation: gradientAnimation 3s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
         <div class="card card-md">
             <div class="card-body">
                 <h2 class="h2 text-center mb-4">Tienda “Buena Salud”</h2>
@@ -25,7 +45,7 @@
                         <label class="form-label">
                             Password
                             <span class="form-label-description">
-                    <a href="{{route('password.request')}}">Olvidé la contraseña</a>
+                    <a href="{{route('password.request')}}"></a>
                   </span>
                         </label>
                         <div class="input-group input-group-flat">
@@ -49,15 +69,55 @@
                         </div>
                     </div>
                     <div class="mb-2">
-                        <label class="form-check">
-                            <input type="checkbox" class="form-check-input"/>
-                            <span class="form-check-label">Remember me on this device</span>
-                        </label>
+                      
                     </div>
-                    <div class="form-footer">
-                        <button type="submit" class="btn btn-primary w-100">Sign in</button>
-                    </div>
-                </form>
+                    <style>
+        /* Estilos básicos del botón */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Estilos iniciales para la animación de fondo */
+        .btn-primary {
+            background: linear-gradient(45deg, #007bff, #ff5733);
+            background-size: 200% 200%;
+            transition: background 0.5s ease;
+        }
+
+        /* Efecto de cambio de colores animado al pasar el mouse */
+        .btn-primary:hover {
+            animation: gradientAnimation 3s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-footer">
+        <button type="submit" class="btn btn-primary w-100">Sign in</button>
+    </div>
+
+            </form>
             </div>
             <div class="hr-text"></div>
             <div class="card-body">
