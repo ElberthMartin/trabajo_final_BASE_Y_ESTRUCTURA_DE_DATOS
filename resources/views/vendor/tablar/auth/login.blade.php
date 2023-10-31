@@ -8,6 +8,8 @@
                      alt=""></a>
         </div>
 
+
+        
         <style>
         .card-md {
             background: linear-gradient(45deg, #007bff, #00c49d);
@@ -29,11 +31,57 @@
     </style>
         <div class="card card-md">
             <div class="card-body">
+            <style>
+  .h2 {
+    text-align: center;
+    margin-bottom: 4px;
+    font-weight: bold; /* Hace que las letras sean más gruesas */
+    font-size: 28px; /* Aumenta el tamaño del texto */
+    background-image: linear-gradient(45deg, #ffcc00, #ff6600); /* Aplica un fondo de gradiente animado */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: blink 1s infinite, gradientAnimation 2s infinite; /* Aplica ambas animaciones infinitamente */
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1; /* Visible al inicio de la animación */
+    }
+    50% {
+      opacity: 0; /* Invisible a la mitad de la animación */
+    }
+    100% {
+      opacity: 1; /* Visible al final de la animación */
+    }
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+</style>
                 <h2 class="h2 text-center mb-4">Tienda “Buena Salud”</h2>
+               
+               
                 <form action="{{route('login')}}" method="post" autocomplete="off" novalidate>
                     @csrf
                     <div class="mb-3">
-                        <label class="form-label">Email address</label>
+                    <style>
+  /* Estilos para la etiqueta */
+  .form-label {
+    font-size: 18px;
+    color: #333; /* Color de texto */
+    font-weight: bold;
+  }
+</style>
+
+<label class="form-label">Email </label>
+
                         <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
                                placeholder="your@email.com"
                                autocomplete="off">
