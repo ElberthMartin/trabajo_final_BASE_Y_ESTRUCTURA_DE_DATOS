@@ -72,45 +72,41 @@
                       
                     </div>
                     <style>
-        /* Estilos básicos del botón */
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            color: #fff;
-            text-align: center;
-            text-transform: uppercase;
-            overflow: hidden;
-            position: relative;
-            z-index: 1;
-        }
+  .form-footer {
+    text-align: center;
+  }
 
-        /* Estilos iniciales para la animación de fondo */
-        .btn-primary {
-            background: linear-gradient(45deg, #007bff, #ff5733);
-            background-size: 200% 200%;
-            transition: background 0.5s ease;
-        }
+  .btn {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, red, blue) 1;
+    border-image-slice: 1;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: linear-gradient(to right, red, blue); /* Fondo de gradiente animado */
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position 1s;
+  }
 
-        /* Efecto de cambio de colores animado al pasar el mouse */
-        .btn-primary:hover {
-            animation: gradientAnimation 3s ease infinite;
-        }
+  .btn:hover {
+    background-position: 0 0;
+  }
 
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-    </style>
+  @keyframes moveBorder {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+</style>
+
+
+
+  
 </head>
 <body>
     <div class="form-footer">
